@@ -1,0 +1,106 @@
+@import "variables";
+
+// --------------
+// Bootstrap 4 Override.
+// --------------
+
+// Overriding the color only on the auth pages.
+$theme-colors: (
+    "primary": #1e824c
+);
+
+@import "~bootstrap/scss/bootstrap";
+
+@import "typography";
+@import "icons";
+@import "utility";
+
+// --------------
+// Typography
+// --------------
+// h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+//     line-height: 1.428571429;
+// }
+
+// --------------
+// Utilities
+// --------------
+
+.block-separator {
+    border-top: 2px solid #8f98a1;
+    margin-left: auto;
+    margin-right: auto;
+
+    &:not(.is-style-wide) {
+        max-width: 100px;
+    }
+
+    &.separator-left {
+        margin-left: 0;
+    }
+}
+
+.d-table {
+    display: table;
+}
+
+.d-table-cell {
+    display: table-cell;
+}
+
+// --------------
+// Global
+// --------------
+body {
+    background-color: #92ec8d;
+    background-image: url('../images/brushed-alum-dark.png');; // fallback.
+    background-image: url('../images/brushed-alum-dark.png'), linear-gradient(45deg, #1d402a 0%, #92ec8d 100%);
+    color: #333;
+}
+
+img {
+    height: auto;
+}
+
+
+// --------------
+// APP Styles
+// --------------
+
+// .bg-pattern {
+//     background-image: url('../images/bg-pattern.jpg');
+// }
+
+// --------------
+// APP Styles
+// --------------
+
+.site-title {
+    font-size: 30px;
+    line-height: 30px;
+    color: var(--primary);
+}
+
+.site-title-mini {
+    font-size: 25px;
+    line-height: 25px;
+}
+
+.site-title-second {
+    font-size: 15px;
+}
+
+.input-with-icon {
+    position: relative;
+
+    .form-control {
+        padding-left: 35px;
+    }
+
+    .input-icon {
+        position: absolute;
+        top: 11px;
+        left: 13px;
+        color: #999;
+    }
+}

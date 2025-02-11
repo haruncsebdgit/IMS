@@ -1,0 +1,1 @@
+{!! Form::select('%%itemName%%', [], null, ['class' => 'form-control enable-select2 ' . ($errors->has('%%itemName%%') ? 'is-invalid' : ''), 'placeholder' => __('Select'), '%%required%%']) !!}

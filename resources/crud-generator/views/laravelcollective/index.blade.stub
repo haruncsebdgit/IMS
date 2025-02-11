@@ -1,0 +1,113 @@
+@extends('layouts.admin')
+
+{{-- make the relevant menu active --}}
+@section('admin_menu_%%crudNameSingular%%', 'active')
+
+{{-- display page title --}}
+@section('page_title', __('%%modelName%%'))
+@section('body_class', '%%modelName%% list')
+
+{{-- display page header --}}
+@section('page_header_icon', 'icon-office')
+@section('page_header', __('%%modelName%%') )
+@section('sidebar')
+    @include('layouts.admin-sidebar-monitoring')
+@endsection
+{{-- display breadcrumbs --}}
+@php
+$breadcrumbs =
+[
+'#' => __('%%modelName%%'),
+action('%%routeGroup%%%%modelName%%Controller@index') => __('%%modelName%%')
+];
+@endphp
+
+@section('breadcrumb_right')
+    {{-- @if( hasUserCap('add_organizations') ) --}}
+        <a class="btn btn-sm btn-primary" href="{{ action('%%routeGroup%%%%modelName%%Controller@create') }}">
+            <i class="icon-add mr-1" aria-hidden="true"></i> {{ __('Add') }}
+        </a>
+    {{-- @endif --}}
+@endsection
+
+{{-- page content --}}
+@section('content')
+
+@if( ! $%%crudName%%->isEmpty() || filter_input(INPUT_GET, 'filter') )
+ @include ('%%viewTemplateDir%%.search-form')
+@endif
+
+@include('errors.validation')
+
+@if(!$%%crudName%%->isEmpty())
+
+<div class="border mb-1">
+    <table class="table table-hover table-striped mb-0">
+        <thead>
+            <tr class="bg-secondary text-white">
+                <th>#</th>%%formHeadingHtml%%<th>{{ __('Actions') }}</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach($%%crudName%% as $item)
+            <tr>
+                <td>{{ $loop->iteration }}</td>
+                %%formBodyHtml%%
+
+                <td>
+                    <div class="dropdown">
+                        <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" id="row-action-button-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {{ __('Actions') }}
+                        </button>
+                       {{--  @if( hasUserCap(['edit_organizations','delete_organizations']) ) --}}
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="row-action-button-1">
+                            @if( hasUserCap('edit_organizations') )
+                            <a href="{{ action('%%routeGroup%%%%modelName%%Controller@edit', ['id' => $item->%%primaryKey%%]) }}" class="dropdown-item">
+                                <i class="icon-pencil7" aria-hidden="true"></i> {{ __('Edit') }}
+                            </a>
+                            @endif
+
+                            <a href="{{ action('%%routeGroup%%%%modelName%%Controller@show', ['id' =>  $item->%%primaryKey%%]) }}" class="dropdown-item">
+                                <i class="icon-eye8" aria-hidden="true"></i> {{ __('View') }}
+                            </a>
+
+                            {{-- @if( hasUserCap('delete_organizations') ) --}}
+                            <div class="dropdown-divider"></div>
+
+                            <form action="{{ route('%%modelName%%.delete', $item->%%primaryKey%%) }}" method="POST">
+                                <button type="submit" onclick="return confirm('Are you sure?')" class="delete-user btn btn-link text-danger dropdown-item">
+                                    <i class="icon-trash" aria-hidden="true"></i> {{ __('Delete') }}
+                                </button>
+                                @csrf
+                                @method('DELETE')
+                            </form>
+                            {{-- @endif --}}
+                        </div>
+                        {{-- @endif --}}
+                    </div>
+                </td>
+            </tr>
+            @endforeach
+        </tbody>
+
+        <tfoot>
+            <tr class="bg-secondary text-white">
+                <th>#</th>%%formHeadingHtml%%<th>{{ __('Actions') }}</th>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+
+{!! gridFooter($%%crudName%%, $itemsPerPage) !!}
+
+
+@else
+
+<div class="alert alert-info alert-styled-left" role="alert">
+    {{ __('Sorry! No data found to display') }}
+</div>
+
+@endif
+
+@endsection

@@ -1,0 +1,1 @@
+{!! Form::textarea('%%itemName%%', null, ['rows'=>3, 'class' => 'form-control ' . ($errors->has('%%itemName%%') ? 'is-invalid' : ''), '%%required%%']) !!}

@@ -1,0 +1,12 @@
+<div class="col-sm-4">
+    <div class="form-group">
+        <label for="%1$s" class="d-block">
+            <span class="font-weight-bold">{{ __(%2$s) }}</span>
+            {{-- <span class="text-danger">*</span> --}}
+        </label>
+        %3$s
+        @if ($errors->has('%1$s'))
+            <div class="invalid-feedback">{{ $errors->first('%1$s') }}</div>
+        @endif
+    </div>
+</div>

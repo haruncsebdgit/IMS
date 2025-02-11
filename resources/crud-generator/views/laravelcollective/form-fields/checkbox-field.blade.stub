@@ -1,0 +1,4 @@
+<div class="custom-control custom-checkbox custom-control-inline">
+    {!! Form::checkbox('%%itemName%%', 1, true, ['id'=>"%%itemName%%1",'class'=>'custom-control-input '. ($errors->has('%%itemName%%') ? 'is-invalid' : ''), '%%required%%') ]) !!}
+    <label class="custom-control-label" for="%%itemName%%1">{{ __("%%itemName%%") }}</label>
+</div>

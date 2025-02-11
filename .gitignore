@@ -1,0 +1,155 @@
+## --------------
+## Laravel
+## --------------
+
+.env
+/public/storage
+/storage/debugbar/*
+/storage/*.key
+/.vagrant
+Homestead.json
+Homestead.yaml
+/public/mix-manifest.json
+
+## --------------
+## Composer
+## --------------
+
+/vendor
+## --------------
+## MPDF generated temp directory
+## --------------
+/storage/framework/mpdf
+
+## --------------
+## Docker generated mysql folder
+## --------------
+/mysql
+
+## --------------
+## CRUD generator generated file
+## --------------
+/resources/crud-generator/fields.json
+
+
+## --------------
+## IDE/Editor
+## --------------
+
+/.idea
+/.vscode
+/nbproject/*
+*.sublime-project
+*.sublime-workspace
+_ide_helper.php
+sublime-gulp.log
+*.todo
+*.code-workspace
+.history
+bash.exe.stackdump
+
+
+## --------------
+## Build files
+## --------------
+
+/dist/*
+
+
+## --------------
+## Node, npm, yarn
+## --------------
+
+/node_modules
+npm-debug.log
+yarn-error.log
+package-lock.json #as we are using yarn and want to stick to it only
+
+## --------------
+## Archives
+## --------------
+
+*.rar
+*.zip
+*.7zip
+
+## --------------
+## Windows Shortcuts
+## --------------
+
+*.lnk
+
+## --------------
+## Windows image file caches
+## --------------
+
+Thumbs.db
+ehthumbs.db
+
+## --------------
+## Folder config files
+## --------------
+
+Desktop.ini
+
+## --------------
+## Recycle Bin used on file shares
+## --------------
+
+$RECYCLE.BIN/
+
+## --------------
+## Others
+## --------------
+
+*.log
+/puppeteer
+
+## --------------
+## Laravel File Manager
+## --------------
+
+public/files/
+public/photos/
+
+## --------------
+## Compiled files
+## --------------
+
+public/css/frontend.css
+public/css/frontend.css.map
+
+public/css/admin.css
+public/css/admin.css.map
+
+public/css/auth.css
+public/css/auth.css.map
+
+public/css/bengali.css
+public/css/bengali.css.map
+
+public/js/bootstrap.js
+
+public/js/vendor-frontend.js
+public/js/vendor-frontend.js.map
+
+public/js/frontend.js
+public/js/frontend.js.map
+
+public/js/vendor-admin.js
+public/js/vendor-admin.js.map
+
+public/js/admin.js
+public/js/admin.js.map
+
+public/js/dashboard-google-maps.js
+public/js/dashboard-google-maps.js.map
+
+public/fonts/
+
+public/uploads/
+public/attachments/
+
+public/images/background.svg
+public/images/village-silhouette.png
+public/images/brushed-alum-dark.png

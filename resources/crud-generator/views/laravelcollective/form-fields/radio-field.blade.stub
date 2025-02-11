@@ -1,0 +1,8 @@
+<div class="custom-control custom-radio custom-control-inline">
+    {!! Form::radio('%%itemName%%', 1, true, ['id'=>"%%itemName%%1",'class'=>'custom-control-input '. ($errors->has('%%itemName%%') ? 'is-invalid' : ''), '%%required%%' ]) !!}
+    <label class="custom-control-label" for="%%itemName%%1">{{ __("Yes") }}</label>
+</div>
+<div class="custom-control custom-radio custom-control-inline">
+    {!! Form::radio('%%itemName%%', 0, false, ['id'=>"%%itemName%%0",'class'=>'custom-control-input '. ($errors->has('%%itemName%%') ? 'is-invalid' : ''), '%%required%%' ]) !!}
+    <label class="custom-control-label" for="%%itemName%%0">{{ __("No") }}</label>
+</div>

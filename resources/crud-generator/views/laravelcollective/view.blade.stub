@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <div class="table-responsive">
+                <table class="table table-borderless">
+                    <tbody>
+                        <tr>
+                            <th>ID</th><td>{{ $%%crudNameSingular%%->%%primaryKey%% }}</td>
+                        </tr>
+                        %%formBodyHtmlForShowView%%
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

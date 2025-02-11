@@ -1,0 +1,83 @@
+<?php
+
+namespace DummyNamespace;
+
+use Illuminate\Database\Eloquent\Model;
+use DB;
+use Auth;
+{{useSoftDeletes}}
+class DummyClass extends Model
+{
+    {{softDeletes}}/**
+     * The database table used by the model.
+     *
+     * @var string
+     */
+    protected $table = '{{table}}';
+
+    {{primaryKey}}
+
+    /**
+     * Attributes that should be mass-assignable.
+     *
+     * @var array
+     */
+    protected $fillable = {{fillable}};
+
+    {{relationships}}
+
+    /**
+     * Get {{table}} List.
+     *
+     * @param array $args Array of arguments.
+     *
+     * @return object Object of fetch {{table}} otherwise null.
+     * --------------------------------------------------
+     */
+    public static function getAll($args = array())
+    {
+        $defaults = array(
+            'exclude'           => array(),
+            'order'             => array(
+                'id'      => 'desc'
+            ),
+            'items_per_page' => -1,
+            'paginate'       => false, // ignored, if 'items_per_page' = -1
+        );
+
+        $arguments = parseArguments($args, $defaults);
+
+        ${{table}} = DummyClass::query();
+
+
+        foreach ($arguments['order'] as $orderBy => $order) {
+            ${{table}} = ${{table}}->orderBy($orderBy, $order);
+        }
+
+        if ($arguments['items_per_page'] == '-1') {
+            ${{table}} = ${{table}}->get();
+        } else {
+            if (true == $arguments['paginate']) {
+                ${{table}} = ${{table}}->paginate(intval($arguments['items_per_page']));
+            } else {
+                ${{table}} = ${{table}}->take(intval($arguments['items_per_page']));
+                ${{table}} = ${{table}}->get();
+            }
+        }
+
+        return ${{table}};
+    }
+
+    public static function saveOrUpdate($requestData, $id = null)
+    {
+        $requestData['organization_id'] = auth()->user()->organization_id;
+        if (is_null($id)) {
+            $requestData['created_by'] = Auth::id();
+
+            DummyClass::create($requestData);
+        } else {
+            $requestData['updated_by'] = Auth::id();
+            DummyClass::findOrFail($id)->update($requestData);
+        }
+    }
+}

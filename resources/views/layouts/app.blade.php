@@ -73,7 +73,7 @@
                         <div class="col-md-5">
                             <div class="" style="padding: 35px">
                                 <a href="{{ route('login') }}" class="d-block mb-4">
-                                    <img class="site-logo mb-2" src="{{ asset('/images/logo-ju.png') }}" alt="Logo of JU">
+                                    <img class="site-logo mb-2" src="{{ asset('/images/iu-logo.png') }}" alt="Logo of IU">
                                     <h2 class="site-title-mini text-uppercase my-0 font-weight-bold">
                                         {{ __('master.app_name_brief') }}
                                     </h2>

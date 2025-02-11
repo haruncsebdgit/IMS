@@ -16,14 +16,14 @@ $master_strings = [
     |
     */
 
-    'app_name'                     => 'জাহাঙ্গীরনগর বিশ্ববিদ্যালয়',
-    'app_unit'                     => 'জাহাঙ্গীরনগর বিশ্ববিদ্যালয়',
-    'app_name_short'               => 'JU',
+    'app_name'                     => 'ইসলামী বিশ্ববিদ্যালয় বাংলাদেশ',
+    'app_unit'                     => 'ইসলামী বিশ্ববিদ্যালয় বাংলাদেশ',
+    'app_name_short'               => 'IU',
     'app_name_brief'               => 'ইনভেন্টরি ম্যানেজমেন্ট সিস্টেম',
     'app_description'              => 'স্থানীয় সরকারকে সহায়তা প্রকল্প',
-    'app_author'                   => 'JU', // Authority
+    'app_author'                   => 'IU', // Authority
     'app_dept'                   => 'কম্পিউটার সায়েন্স এন্ড ইঞ্জিনিয়ারিং বিভাগ', // Authority
-    'app_subtitle_1'               => 'জাহাঙ্গীরনগর বিশ্ববিদ্যালয়',
+    'app_subtitle_1'               => 'ইসলামী বিশ্ববিদ্যালয় বাংলাদেশ',
     'app_subtitle_2'               => '',
 
     'view'                          => 'দেখা',

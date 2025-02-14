@@ -48,7 +48,7 @@ services:
     ports:
       - "9531:80"
     environment:
-      - PMA_HOST=mysql
+      - PMA_HOST=mysql-ims-iu
       - UPLOAD_LIMIT=2G
 
 # Docker Volumes

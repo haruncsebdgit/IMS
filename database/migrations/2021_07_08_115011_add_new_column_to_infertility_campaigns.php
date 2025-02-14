@@ -14,8 +14,8 @@ class AddNewColumnToInfertilityCampaigns extends Migration
     public function up()
     {
         Schema::table('infertility_campaigns', function (Blueprint $table) {
-            
-            $table->foreignId('organogram_id')
+
+           /* $table->foreignId('organogram_id')
             ->nullable()->after('id')
             ->constrained('organograms')
             ->onUpdate('cascade')
@@ -24,7 +24,7 @@ class AddNewColumnToInfertilityCampaigns extends Migration
             ->nullable()->after('organogram_id')
             ->constrained('projects')
             ->onUpdate('cascade')
-            ->onDelete('restrict');
+            ->onDelete('restrict');*/
         });
     }
 
@@ -36,7 +36,7 @@ class AddNewColumnToInfertilityCampaigns extends Migration
     public function down()
     {
         Schema::table('infertility_campaigns', function (Blueprint $table) {
-            
+
             Schema::disableForeignKeyConstraints();
             $table->dropForeign('infertility_campaigns_organogram_id_foreign');
             $table->dropForeign('infertility_campaigns_project_id_foreign');

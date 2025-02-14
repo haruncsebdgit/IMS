@@ -21,7 +21,7 @@ use Illuminate\Support\Facades\Route;
 | and clean up the things accordingly. It's a nicer way
 | to clear things while in production.
 |
-| @props Nazmul Hasan
+| @props Mohammad Harun-Or-Rashid
 | @link  https://laravel.com/docs/5.2/artisan#calling-commands-via-code
 | --------------------------------------------------------------------------
 */

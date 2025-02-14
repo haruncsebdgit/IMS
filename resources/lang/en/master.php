@@ -16,14 +16,14 @@ $master_strings = [
     |
     */
 
-    'app_name'                      => 'Islamic University University Bangladesh',
-    'app_unit'                      => 'Islamic University University Bangladesh',
+    'app_name'                      => 'Islamic University Bangladesh',
+    'app_unit'                      => 'Islamic University Bangladesh',
     'app_name_short'                => 'IU',
     'app_description'               => 'Supporting Local Gorvernment',
     'app_name_brief'                => 'Inventory Management System',
     'app_author'                    => 'IU', // Authority
     'app_dept'                   => 'Department of Computer Science & Engineering',
-    'app_subtitle_1'                => 'Islamic University University Bangladesh',
+    'app_subtitle_1'                => 'Islamic University Bangladesh',
     'app_subtitle_2'                => '',
 
     'view'                          => 'View',

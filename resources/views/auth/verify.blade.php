@@ -24,7 +24,7 @@
             </div>
             <!-- /.card -->
             <footer class="text-center text-muted small mt-2">
-                {{ __('Designed & Developed by') }} <a href="https://technovista.com.bd?ref=lgsp3" class="text-reset" target="_blank" rel="noopener">{{ __('TechnoVista Limited') }}</a>
+                {{ __('Designed & Developed by') }} <a href="#" class="text-reset" target="_blank" rel="noopener">{{ __('Mohammad Harun-Or-Rashid and Musa Kalimullah') }}</a>
             </footer>
         </div>
     </div>

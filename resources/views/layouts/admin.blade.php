@@ -83,7 +83,7 @@
         <nav class="navbar navbar-expand-md navbar-dark gray-header">
 
                 <a class="navbar-brand" href="{{ action('Admin\DashboardController@index') }}">
-                    <img src="{{ asset('/images/iu-logo.png') }}" alt="Logo of the IU" class="mr-1" width="30" height="30">
+                    <img src="{{ asset('/images/iu-logo.png') }}" alt="Logo of the IU" class="mr-1" width="80" height="80">
                     <span class="mt-1 d-inline-block"><span class="d-none d-sm-block">{{ __('master.app_name') }}</span> <span class="d-block d-sm-none" aria-hidden="true">{{ __('master.app_name_short') }}</span></span>
                 </a>
 

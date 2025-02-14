@@ -73,7 +73,7 @@
                         <div class="col-md-5">
                             <div class="" style="padding: 35px">
                                 <a href="{{ route('login') }}" class="d-block mb-4">
-                                    <img class="site-logo mb-2" src="{{ asset('/images/iu-logo.png') }}" alt="Logo of IU">
+                                    <img class="site-logo mb-2" src="{{ asset('/images/iu-logo.png') }}" alt="Logo of IU" style="margin-left: 72px; max-height: 95px;">
                                     <h2 class="site-title-mini text-uppercase my-0 font-weight-bold">
                                         {{ __('master.app_name_brief') }}
                                     </h2>
@@ -96,13 +96,13 @@
                 </div>
                 <div class="row small mt-2">
                     <div class="col-sm-5 text-center text-sm-left text-white">
-                        <p>{{ autoCopyright(2021, __('master.app_name_short')) }}</p>
+                        <p>{{ autoCopyright(2024, __('master.app_name_short')) }}</p>
                     </div>
                     <div class="col-sm-7 text-center text-sm-right text-white">
                         <p>
                             {{ __('Designed & Developed by') }}:
                             <a href="#" target="_blank" rel="noopener" class="text-reset">
-                                {{ __('Nazmul Hasan') }}
+                                {{ __('Mohammad Harun-Or-Rashid and Musa Kalimullah') }}
                             </a>
                         </p>
                     </div>

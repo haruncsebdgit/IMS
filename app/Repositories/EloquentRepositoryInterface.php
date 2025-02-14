@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Model;
  * Eloquent Repository Base Interface
  * Contains all Laravel default ORM method signature
  * 
- * @author Nazmul Hasan
+ * @author Mohammad Harun-Or-Rashid
  */
 interface EloquentRepositoryInterface
 {

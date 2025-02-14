@@ -14,7 +14,7 @@ use Illuminate\View\Component;
  * Location (Division, District ... Union) component
  * Populating all location dropdown from user session location id and auto select specific location
  * 
- * @author Nazmul Hasan
+ * @author Mohammad Harun-Or-Rashid
  */
 class Location extends Component
 {

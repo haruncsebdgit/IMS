@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Model;
  * Base Repository class
  * Contains all Laravel default ORM method implementation
  * 
- * @author Nazmul Hasan
+ * @author Mohammad Harun-Or-Rashid
  */
 class BaseRepository implements EloquentRepositoryInterface
 {

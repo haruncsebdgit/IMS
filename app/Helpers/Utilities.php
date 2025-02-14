@@ -1114,7 +1114,7 @@ function genderLabel($gender)
  * @param $date date to add days
  * @param $days
  * @param $format date format that will be return
- * @author Nazmul Hasan
+ * @author Mohammad Harun-Or-Rashid
  */
 function addDaysToDate($date, $days, $format = 'd-m-Y')
 {

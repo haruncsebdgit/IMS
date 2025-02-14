@@ -13,7 +13,7 @@ use Illuminate\View\Component;
  * Load Member Type (CIG/NON CIG) and show CIG Member or Farmer dropdown with member type wise
  * Added modal inside farmer dropdown button to add farmer from current scope.
  * 
- * @author Nazmul Hasan
+ * @author Mohammad Harun-Or-Rashid
  */
 class Farmer extends Component
 {

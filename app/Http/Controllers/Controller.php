@@ -18,7 +18,7 @@ class Controller extends BaseController
      * @param array $data 
      * @param bool $isCreatedBy If true then push auth id to created by index, otherwise updated by index
      * 
-     * @author Nazmul Hasan
+     * @author Mohammad Harun-Or-Rashid
      */
     public function pushUserSessionData(array $data, bool $isCreatedBy = true)
     {

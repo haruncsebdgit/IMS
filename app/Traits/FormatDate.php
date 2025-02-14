@@ -1,7 +1,7 @@
 <?php
 /**
  * Simple trait  for converting date from one format to another format
- * @author: Nazmul Hasan
+ * @author: Mohammad Harun-Or-Rashid
  *
  */
 

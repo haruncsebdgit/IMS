@@ -174,7 +174,7 @@ $breadcrumbs =
                 <div class="card-header"><h3 class="h6 mb-0">{{ __('Get Support') }}</h3></div>
                 <div class="card-body">
                     <p>
-                        {!! __('Thank you for using our system. For getting support, you are requested to contact with <strong>TechnoVista Limited</strong> with any of the following methods') !!}
+                        {!! __('Thank you for using our system. For getting support, you are requested to contact with <strong>IMS</strong> with any of the following methods') !!}
                     </p>
                     <div class="font-weight-bold small">{{ __('Website') }}</div>
                     <a href="https://technovista.com.bd" target="_blank" rel="noopener" class="small">technovista.com.bd</a>

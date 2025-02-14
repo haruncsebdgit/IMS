@@ -1,18 +1,18 @@
 # For more information: https://laravel.com/docs/sail
 version: '3'
 services:
-  nginx:
+  nginx-ims-iu:
     build:
       context: "./.deploy/docker/nginx"
     restart: unless-stopped
     depends_on:
-      - php-fpm
+      - php-fpm-ims-iu
     volumes:
       - ./:/var/www/html
     ports:
       - "9530:80"
 
-  php-fpm:
+  php-fpm-ims-iu:
     build:
       context: "./.deploy/docker/php-fpm"
     restart: unless-stopped
@@ -21,7 +21,7 @@ services:
     expose:
       - "9000"
 
-  mysql:
+  mysql-ims-iu:
     image: 'mysql/mysql-server:8.0'
     restart: unless-stopped
     ports:
@@ -40,10 +40,10 @@ services:
       retries: 3
       timeout: 5s
 
-  phpmyadmin-staging:
+  phpmyadmin-ims-iu:
     image: phpmyadmin
     depends_on:
-      - mysql
+      - mysql-ims-iu
     restart: unless-stopped
     ports:
       - "9531:80"

@@ -7,7 +7,7 @@ use App\Repositories\EloquentRepositoryInterface;
 /**
  * AIF fund type repository interface
  * 
- * @author Nazmul
+ * @author Mohammad Harun-Or-Rashid
  */
 interface FundTypeRepositoryInterface extends EloquentRepositoryInterface{
     /**

@@ -13,7 +13,7 @@ use DB;
 /**
  * AIF Assessment Indicator repository
  * 
- * @author Nazmul
+ * @author Mohammad Harun-Or-Rashid
  */
 class IndicatorConfigurationRepository extends BaseRepository implements IndicatorConfigurationInterface {
        /**

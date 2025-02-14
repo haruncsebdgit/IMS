@@ -7,7 +7,7 @@ use App\Repositories\EloquentRepositoryInterface;
 /**
  * AIF Assessment repository interface
  * 
- * @author Nazmul
+ * @author Mohammad Harun-Or-Rashid
  */
 interface ImpactAssessmentInterface extends EloquentRepositoryInterface{
     /**

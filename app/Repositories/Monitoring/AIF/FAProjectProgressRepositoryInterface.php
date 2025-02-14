@@ -7,7 +7,7 @@ use App\Repositories\EloquentRepositoryInterface;
 /**
  * AIF fund allocation Sub prject progress repository interface
  * 
- * @author Nazmul
+ * @author Mohammad Harun-Or-Rashid
  */
 interface FAProjectProgressRepositoryInterface extends EloquentRepositoryInterface{
     /**

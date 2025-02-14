@@ -7,7 +7,7 @@ use App\Repositories\EloquentRepositoryInterface;
 /**
  * AIF Assessment Indicator Configuration repository interface
  * 
- * @author Nazmul
+ * @author Mohammad Harun-Or-Rashid
  */
 interface IndicatorConfigurationInterface extends EloquentRepositoryInterface{
     /**

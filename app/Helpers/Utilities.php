@@ -1123,7 +1123,7 @@ function addDaysToDate($date, $days, $format = 'd-m-Y')
 
 /**
  * Format date
- * @author Nazmul
+ * @author Mohammad Harun-Or-Rashid
  */
 function formatDate($date, $format = 'd-m-Y')
 {
@@ -1840,7 +1840,7 @@ function convertNumberToBengaliwords($number)
  * Replace filter parameter(Division id, district id, upazilla id, union id)
  * with session parameter(Division id, district id, upazilla id, union id)
  *
- * @author Nazmul
+ * @author Mohammad Harun-Or-Rashid
  */
 function resetUserLocationId($argument)
 {

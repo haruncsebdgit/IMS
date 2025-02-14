@@ -23,7 +23,7 @@ use App\Repositories\Monitoring\AIF\FundAllocationRepositoryInterface;
 /**
  * AIF Assessment Indicator repository
  *
- * @author Nazmul
+ * @author Mohammad Harun-Or-Rashid
  */
 class ImpactAssessmentRepository extends BaseRepository implements ImpactAssessmentInterface {
        /**

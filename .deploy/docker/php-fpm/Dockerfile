@@ -39,7 +39,7 @@ COPY ./conf.d/custom.ini /usr/local/etc/php/conf.d/custom.ini
 # RUN chmod -R 777 storage
 
 # Expose port 9000 and start php-fpm server
-EXPOSE 8000
+EXPOSE 9000
 
 # start php-fpm
 CMD composer install; php-fpm

@@ -19,7 +19,7 @@ services:
     volumes:
       - ./:/var/www/html
     expose:
-      - "8000"
+      - "9000"
 
   mysql:
     image: 'mysql/mysql-server:8.0'

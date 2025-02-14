@@ -1,0 +1,57 @@
+# For more information: https://laravel.com/docs/sail
+version: '3'
+services:
+  nginx:
+    build:
+      context: "./.deploy/docker/nginx"
+    restart: unless-stopped
+    depends_on:
+      - php-fpm
+    volumes:
+      - ./:/var/www/html
+    ports:
+      - "9510:80"
+
+  php-fpm:
+    build:
+      context: "./.deploy/docker/php-fpm"
+    restart: unless-stopped
+    volumes:
+      - ./:/var/www/html
+    expose:
+      - "8000"
+
+  mysql:
+    image: 'mysql/mysql-server:8.0'
+    restart: unless-stopped
+    ports:
+      - "3510:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: '123456'
+      MYSQL_ROOT_HOST: "%"
+      MYSQL_USER: 'root'
+      MYSQL_PASSWORD: '123456'
+      MYSQL_ALLOW_EMPTY_PASSWORD: 1
+    volumes:
+      - './volumes/mysql:/var/lib/mysql'
+      - './.deploy/docker/mysql/conf.d/my.cnf:/etc/mysql/conf.d/my.cnf'
+    healthcheck:
+      test: [ "CMD", "mysqladmin", "ping", "-p123456" ]
+      retries: 3
+      timeout: 5s
+
+  phpmyadmin-staging:
+    image: phpmyadmin
+    depends_on:
+      - mysql
+    restart: unless-stopped
+    ports:
+      - 9511:80
+    environment:
+      - PMA_HOST=mysql-staging
+      - UPLOAD_LIMIT=2G
+
+# Docker Volumes
+volumes:
+  mysql:
+    driver: local

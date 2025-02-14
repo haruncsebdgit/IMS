@@ -14,11 +14,11 @@ class AddMainOccupationColumnToCigMembersTable extends Migration
     public function up()
     {
         Schema::table('cig_members', function (Blueprint $table) {
-            $table->foreignId('main_occupation_id')
+            /*$table->foreignId('main_occupation_id')
                 ->nullable()->comment('Only for DLS')->after('cig_designation_id')
                 ->constrained('common_labels')
                 ->onUpdate('cascade')
-                ->onDelete('restrict');
+                ->onDelete('restrict');*/
         });
     }
 

@@ -20,9 +20,9 @@ class AddColumnToCigsTable extends Migration
                 ->onUpdate('cascade')
                 ->onDelete('restrict');*/
 
-            $table->tinyInteger('holding_monthly_meeting')->nullable()->after('dls_cig_category_id')->comment('For DLS');
-            $table->decimal('total_investment', 12, 2)->nullable()->after('holding_monthly_meeting')->comment('For DLS');
-            $table->decimal('total_savings', 12, 2)->nullable()->after('total_investment')->comment('For DLS');
+        //    $table->tinyInteger('holding_monthly_meeting')->nullable()->after('dls_cig_category_id')->comment('For DLS');
+         //   $table->decimal('total_investment', 12, 2)->nullable()->after('holding_monthly_meeting')->comment('For DLS');
+        //    $table->decimal('total_savings', 12, 2)->nullable()->after('total_investment')->comment('For DLS');
         });
     }
 

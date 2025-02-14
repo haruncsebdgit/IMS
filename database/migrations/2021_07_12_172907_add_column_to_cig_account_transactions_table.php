@@ -14,7 +14,7 @@ class AddColumnToCigAccountTransactionsTable extends Migration
     public function up()
     {
         Schema::table('cig_account_transactions', function (Blueprint $table) {
-            $table->unsignedBigInteger('transaction_type_id')->nullable()->change();
+           /* $table->unsignedBigInteger('transaction_type_id')->nullable()->change();
             $table->unsignedBigInteger('deposite_type_id')->nullable()->change();
             $table->string('field_of_investment', 300)->nullable()->change();
             $table->date('date_of_transaction')->nullable()->change();
@@ -34,7 +34,7 @@ class AddColumnToCigAccountTransactionsTable extends Migration
             $table->decimal('withdraw_investment', 12, 2)->nullable()->after('deposit_others')->comment('For DLS');
             $table->decimal('withdraw_saving_returned', 12, 2)->nullable()->after('withdraw_investment')->comment('For DLS');
             $table->decimal('withdraw_profit_distribution', 12, 2)->nullable()->after('withdraw_saving_returned')->comment('For DLS');
-            $table->decimal('withdraw_others', 12, 2)->nullable()->after('withdraw_profit_distribution')->comment('For DLS');
+            $table->decimal('withdraw_others', 12, 2)->nullable()->after('withdraw_profit_distribution')->comment('For DLS');*/
 
         });
     }

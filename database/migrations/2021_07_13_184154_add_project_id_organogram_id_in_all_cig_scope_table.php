@@ -13,7 +13,7 @@ class AddProjectIdOrganogramIdInAllCigScopeTable extends Migration
      */
     public function up()
     {
-        Schema::table('cigs', function (Blueprint $table) {
+        /*Schema::table('cigs', function (Blueprint $table) {
             $table->foreignId('organogram_id')
                     ->nullable()->after('id')
                     ->constrained('organograms')
@@ -60,7 +60,7 @@ class AddProjectIdOrganogramIdInAllCigScopeTable extends Migration
                     ->constrained('projects')
                     ->onUpdate('cascade')
                     ->onDelete('restrict');
-        });
+        });*/
     }
 
     /**

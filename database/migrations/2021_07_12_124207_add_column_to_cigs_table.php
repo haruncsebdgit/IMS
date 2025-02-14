@@ -14,11 +14,11 @@ class AddColumnToCigsTable extends Migration
     public function up()
     {
         Schema::table('cigs', function (Blueprint $table) {
-            $table->foreignId('dls_cig_category_id')
+           /* $table->foreignId('dls_cig_category_id')
                 ->nullable()->comment('Only for DLS')->after('cig_category')
                 ->constrained('common_labels')
                 ->onUpdate('cascade')
-                ->onDelete('restrict');
+                ->onDelete('restrict');*/
 
             $table->tinyInteger('holding_monthly_meeting')->nullable()->after('dls_cig_category_id')->comment('For DLS');
             $table->decimal('total_investment', 12, 2)->nullable()->after('holding_monthly_meeting')->comment('For DLS');
